@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Créations personnelles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Créations personnelles</h1>
+<p>Partage ta création et mets ton talent en avant.</p>
+
+<form name="creation-personnelle" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="creation-personnelle">
+
+  <label for="auteur">Nom ou pseudo :</label><br>
+  <input type="text" name="auteur" id="auteur" required><br><br>
+
+  <label for="classe">Classe (facultatif) :</label><br>
+  <input type="text" name="classe" id="classe"><br><br>
+
+  <label for="creation">Ta création :</label><br>
+  <textarea name="creation" id="creation" required></textarea><br><br>
+
+  <button type="submit">Envoyer</button>
+</form>
+
+</body>
+</html>
