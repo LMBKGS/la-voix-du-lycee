@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Boîte à idées</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Boîte à idées</h1>
+<p>Propose des idées pour améliorer le lycée.</p>
+
+<form name="boite-idee" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="boite-idee">
+
+  <label for="idee">Ton idée :</label><br>
+  <textarea name="idee" id="idee" required></textarea><br><br>
+
+  <input type="checkbox" checked disabled>
+  <label>Envoyer anonymement</label><br><br>
+
+  <button type="submit">Envoyer</button>
+</form>
+
+</body>
+</html>
