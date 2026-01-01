@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Témoignage anonyme</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Témoignage anonyme</h1>
+<p>Exprime-toi librement. Ton identité ne sera jamais demandée.</p>
+
+<form name="temoignage-anonyme" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="temoignage-anonyme">
+
+  <label for="contenu">Ton témoignage :</label><br>
+  <textarea name="contenu" id="contenu" required></textarea><br><br>
+
+  <input type="checkbox" checked disabled>
+  <label>Envoyer anonymement</label><br><br>
+
+  <button type="submit">Envoyer</button>
+</form>
+
+</body>
+</html>
