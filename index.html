@@ -1,55 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>La Voix du Lycée</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS commun -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Netlify Forms – Detection (DO NOT REMOVE) -->
-<form name="temoignage-anonyme" method="POST" data-netlify="true" hidden>
-  <input type="hidden" name="form-name" value="temoignage-anonyme">
-  <textarea name="message"></textarea>
-</form>
 
-<form name="boite-idee" method="POST" data-netlify="true" hidden>
-  <input type="hidden" name="form-name" value="boite-idee">
-  <textarea name="idee"></textarea>
-</form>
+  <!-- HEADER -->
+  <header>
+    <img src="images/logo.png" alt="Logo Gouvernement Scolaire" class="logo">
+    <h1>La Voix du Lycée</h1>
+    <p>Plateforme officielle du Gouvernement Scolaire</p>
+  </header>
 
-<form name="creation-personnelle" method="POST" data-netlify="true" hidden>
-  <input type="hidden" name="form-name" value="creation-personnelle">
-  <input type="text" name="auteur">
-  <textarea name="contenu"></textarea>
-</form>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="temoignages.html">Témoignages</a>
+    <a href="creations.html">Créations</a>
+    <a href="journal.html">Journal du GS</a>
+    <a href="charte.html">Charte</a>
+  </nav>
 
-<header>
-  <img src="958c0ae3-9e6b-4ebf-9d0e-2653cc266b6f.png" alt="Logo officiel">
-  <h1>La Voix du Lycée</h1>
-  <p>Un espace d’expression libre, anonyme et respectueux</p>
-</header>
+  <!-- CONTENU PRINCIPAL -->
+  <main>
 
-<nav>
-  <a href="temoignages.html">Témoignages anonymes</a>
-  <a href="journal.html">Journal</a>
-  <a href="creations.html">Créations</a>
-  <a href="idees.html">Boîte à idées</a>
-  <a href="charte.html">Charte</a>
-</nav>
+    <!-- TÉMOIGNAGE ANONYME -->
+    <section>
+      <h2>Témoignage anonyme</h2>
 
-<main>
-  <h2>Bienvenue</h2>
-  <p>
-    La Voix du Lycée est une initiative du Gouvernement Scolaire.
-    Elle permet aux élèves de s’exprimer librement, sans révéler leur identité,
-    dans un cadre sécurisé et respectueux.
-  </p>
-</main>
+      <form method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="temoignage-anonyme">
 
-<footer>
-  © Gouvernement Scolaire — La Voix du Lycée
-</footer>
+        <textarea name="message" placeholder="Écris ton témoignage ici..." required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <!-- BOÎTE À IDÉES -->
+    <section>
+      <h2>Boîte à idées</h2>
+
+      <form method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="boite-idee">
+
+        <textarea name="idee" placeholder="Propose une idée..." required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <!-- CRÉATION PERSONNELLE (NON ANONYME) -->
+    <section>
+      <h2>Création personnelle</h2>
+
+      <form method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="creation-personnelle">
+
+        <input type="text" name="auteur" placeholder="Ton nom / pseudo" required>
+        <textarea name="contenu" placeholder="Partage ta création..." required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© Gouvernement Scolaire – La Voix du Lycée</p>
+  </footer>
 
 </body>
 </html>
